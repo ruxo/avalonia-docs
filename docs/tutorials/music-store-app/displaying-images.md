@@ -201,10 +201,10 @@ Follow this procedure:
 - Add this data binding and converter to the panel element below:
 
 ```
-IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNull}}"
+IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNotNull}}"
 ```
 
-A converter is an extension of a data binding expression that can convert the binding value before it is passed to the bound control. The `IsNull` converter returns a Boolean that is true when the value object is null.
+A converter is an extension of a data binding expression that can convert the binding value before it is passed to the bound control. The `IsNotNull` converter returns a Boolean that is true when the value object, which is the cover bitmap, is not null.
 
 :::info
 For more information about the _Avalonia UI_ built-in binding converters, see the reference [here](../../reference/built-in-data-binding-converters.md).
